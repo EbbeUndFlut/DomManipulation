@@ -61,3 +61,10 @@ for (const game of boardgames){
     li.textContent = game
     boardgameListenElement.append(li)
 }
+
+const lis =document.querySelectorAll("li")
+lis.forEach((elem) => {
+    elem.addEventListener("click",()=>{
+        elem.classList.toggle('done')
+    })
+})
