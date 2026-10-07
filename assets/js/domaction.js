@@ -31,8 +31,8 @@ for(let i = 0; i<posaunen.length;i++){
 console.log(wichtig.classList)
 wichtig.classList.add("switch") // fügt hinzu
 wichtig.classList.remove("switch") // entfernt
-wichtig.classList.toggle("switch") // hinzufügen weil nich da
-wichtig.classList.toggle("switch") // entfernen weil da
+wichtig.classList.toggle("switch") // wenn das element die klasse "wichtig" in der eigenen Klassenliste hat, dann wird es entfernt, ansonsten hinzugefügt
+wichtig.classList.toggle("switch") // 
 wichtig.classList.contains("switch") // liefert einen boolean, wenn klasse vorhanden dann true. ansonsten false
 
 
@@ -52,3 +52,12 @@ li.remove() //löscht das element
  * ["Die Siedler von Catan", "Twilight Imperium", "Nemesis", "Arkham Horror", "Fallout the Board game", "Dark Souls the Board"]
  * im HTML macht ihr eine liste ul oder ol aber die li elemente fügt iht per code zu
  */
+const boardgames = ["Die Siedler von Catan","Monopoly", "Twilight Imperium", "Nemesis", "Arkham Horror", "Fallout the Board game", "Dark Souls the Boardgame"]
+
+const boardgameListenElement = document.getElementById('boardgames') // jetzt haben wir das ul lement an der hand
+
+for (const game of boardgames){
+    let li = document.createElement("li")
+    li.textContent = game
+    boardgameListenElement.append(li)
+}
